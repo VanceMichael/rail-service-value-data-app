@@ -55,6 +55,34 @@
       "home",
       "available_day",
       "total_mass_kg"
+    ],
+    "freight-profile": [
+      "lot",
+      "season",
+      "cargo",
+      "shipper_group",
+      "origin_panel",
+      "known_day"
+    ],
+    "service-capture": [
+      "season",
+      "station",
+      "cargo",
+      "shipper_group",
+      "registered_scope",
+      "interviewed",
+      "eligible_population",
+      "known_day"
+    ],
+    "shipment-receipts": [
+      "receipt",
+      "lot",
+      "station",
+      "received_day",
+      "known_day",
+      "kg",
+      "mode",
+      "state"
     ]
   },
   "links": [
@@ -85,6 +113,24 @@
     [
       "loads",
       "destination",
+      "port-calls",
+      "station"
+    ],
+    [
+      "freight-profile",
+      "lot",
+      "loads",
+      "lot"
+    ],
+    [
+      "shipment-receipts",
+      "lot",
+      "loads",
+      "lot"
+    ],
+    [
+      "shipment-receipts",
+      "station",
       "port-calls",
       "station"
     ]

@@ -1,0 +1,8 @@
+receipt,lot,station,received_day,known_day,kg,mode,state
+Y1,L1,P,4,5,900,road,accepted
+Y2,L2,P,6,7,160,rail,accepted
+Y3,L2,P,7,8,80,rail,accepted
+Y4,L4,P,3,8,920,road,accepted
+Y5,L17,P,8,9,280,rail,accepted
+Y6,L17,P,8,9,137,rail,held
+Y7,L25,P,5,6,971,rail,accepted

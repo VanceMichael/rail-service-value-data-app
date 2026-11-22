@@ -1,0 +1,10 @@
+season,station,cargo,shipper_group,registered_scope,interviewed,eligible_population,known_day
+wet,A,grain,large,open,14,24,3
+wet,A,grain,small,open,22,64,3
+wet,B,produce,small,partial,9,48,4
+wet,C,produce,small,partial,3,32,5
+wet,C,mineral,large,open,6,11,3
+dry,A,grain,large,open,17,25,3
+dry,A,grain,small,open,20,45,3
+dry,B,produce,small,unknown,2,31,5
+dry,C,mineral,large,open,7,11,3
