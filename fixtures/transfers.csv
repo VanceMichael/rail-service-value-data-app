@@ -1,0 +1,5 @@
+line,lot,leg,day,kg,mode,kind
+X1,L1,A-B,2,900,road,feeder
+X2,L1,B-C,3,900,rail,loaded
+X3,L4,B-P,3,920,road,alternate
+X4,L1,C-P,4,900,road,feeder

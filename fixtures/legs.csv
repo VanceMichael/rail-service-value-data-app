@@ -1,0 +1,11 @@
+option,leg,start_day,end_day,max_kg,vehicle,direction
+S0,A-B,2,3,1000,C1,east
+S0,B-C,3,4,1000,C1,east
+S0,C-P,4,7,950,C1,east
+S1,B-C,2,3,950,C1,east
+S1,C-P,3,5,950,C1,east
+S1,A-B,2,3,1000,C1,east
+S2,A-B,1,2,1000,C2,east
+S2,B-C,2,3,1000,C2,east
+S2,C-P,4,5,1200,C2,east
+S2,C-B,3,4,0,C1,empty

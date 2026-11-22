@@ -1,0 +1,16 @@
+lot,window_from,window_to,return_class,weight,evidence_day
+L4,4,8,range,2.0,4
+L5,,,unknown,3.5,3
+L3,3,6,confirmed,1.0,4
+L10,3,8,unknown,1.2,4
+L11,4,9,range,1.6,5
+L12,5,8,range,2.0,4
+L14,4,8,range,1.2,4
+L15,5,9,range,1.6,5
+L16,3,8,unknown,2.0,4
+L18,5,8,range,1.2,4
+L19,3,9,unknown,1.6,5
+L20,4,8,range,2.0,4
+L22,3,8,unknown,1.2,4
+L23,4,9,range,1.6,5
+L24,5,8,range,2.0,4

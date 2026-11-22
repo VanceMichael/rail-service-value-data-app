@@ -1,0 +1,92 @@
+{
+  "tables": {
+    "loads": [
+      "lot",
+      "shipper",
+      "origin",
+      "destination",
+      "kg",
+      "received_day",
+      "deliver_by",
+      "splittable",
+      "state"
+    ],
+    "transfers": [
+      "line",
+      "lot",
+      "leg",
+      "day",
+      "kg",
+      "mode",
+      "kind"
+    ],
+    "road-survey": [
+      "lot",
+      "window_from",
+      "window_to",
+      "return_class",
+      "weight",
+      "evidence_day"
+    ],
+    "legs": [
+      "option",
+      "leg",
+      "start_day",
+      "end_day",
+      "max_kg",
+      "vehicle",
+      "direction"
+    ],
+    "obligations": [
+      "lot",
+      "min_kg",
+      "promised_by",
+      "acceptance_day",
+      "local_station_floor"
+    ],
+    "port-calls": [
+      "station",
+      "cutoff_day",
+      "known_day",
+      "mode"
+    ],
+    "vehicle-rules": [
+      "vehicle",
+      "home",
+      "available_day",
+      "total_mass_kg"
+    ]
+  },
+  "links": [
+    [
+      "transfers",
+      "lot",
+      "loads",
+      "lot"
+    ],
+    [
+      "obligations",
+      "lot",
+      "loads",
+      "lot"
+    ],
+    [
+      "road-survey",
+      "lot",
+      "loads",
+      "lot"
+    ],
+    [
+      "legs",
+      "vehicle",
+      "vehicle-rules",
+      "vehicle"
+    ],
+    [
+      "loads",
+      "destination",
+      "port-calls",
+      "station"
+    ]
+  ]
+}
