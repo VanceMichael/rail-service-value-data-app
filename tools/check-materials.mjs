@@ -1,7 +1,15 @@
 import { readFile } from 'node:fs/promises';
+import { resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const folder = new URL('../fixtures/', import.meta.url);
+
+function sourceUrl(source) {
+  if (source instanceof URL) {
+    return source.href.endsWith('/') ? source : new URL(`${source.href}/`);
+  }
+  return pathToFileURL(`${resolve(source)}${sep}`);
+}
 
 export function parseTable(content, fields, table) {
   const lines = content.trimEnd().split(/\r?\n/);
@@ -30,17 +38,23 @@ export function checkLinks(tables, links) {
   }
 }
 
-export async function checkMaterials(source = folder) {
-  const format = JSON.parse(await readFile(new URL('format.json', source), 'utf8'));
+export async function loadMaterials(source = folder) {
+  const base = sourceUrl(source);
+  const format = JSON.parse(await readFile(new URL('format.json', base), 'utf8'));
   const tables = {};
   for (const [name, fields] of Object.entries(format.tables)) {
-    const content = await readFile(new URL(`${name}.csv`, source), 'utf8');
+    const content = await readFile(new URL(`${name}.csv`, base), 'utf8');
     tables[name] = parseTable(content, fields, name);
     if (tables[name].length === 0) {
       throw new Error(`${name} 没有交接记录`);
     }
   }
   checkLinks(tables, format.links);
+  return { format, tables };
+}
+
+export async function checkMaterials(source = folder) {
+  const { tables } = await loadMaterials(source);
   return Object.fromEntries(Object.entries(tables).map(([name, rows]) => [name, rows.length]));
 }
 

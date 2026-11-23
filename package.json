@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "node --test",
-    "check:materials": "node tools/check-materials.mjs"
+    "check:materials": "node tools/check-materials.mjs",
+    "review": "node tools/service-review.mjs"
   }
 }
